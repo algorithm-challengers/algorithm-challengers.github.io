@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 )
@@ -20,13 +21,6 @@ func main() {
 	}
 	defer f.Close()
 
-	f.WriteString(`<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Go Docs</title>
-</head>
-<body>
-	<h1>Go Docs</h1>
-</body>`)
+	f.WriteString(fmt.Sprintf(header, "Hello, World!"))
+	f.WriteString(fmt.Sprintf(body, "<h1>Hello, World!</h1>"))
 }
