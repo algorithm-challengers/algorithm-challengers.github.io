@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Create Pages
-        run: go run main.go
+        run: go run .
 
       - name: Commit to
         run: |
