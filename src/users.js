@@ -19,8 +19,6 @@ export let users = [
     new User('축산협회', ''),
 ]
 
-users.sort((a, b) => b.score - a.score);
-
 for (let i = 0; i < users.length; i++) {
     let user = users[i];
     let solved = solveds[user.name];
@@ -38,3 +36,5 @@ for (let i = 0; i < users.length; i++) {
         user.score = user.easy + user.medium + user.hard;
     }
 }
+
+users = users.sort((a, b) => b.score - a.score);
