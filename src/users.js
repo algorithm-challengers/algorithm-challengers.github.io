@@ -7,7 +7,7 @@ export class User {
         this.medium = medium;
         this.hard = hard;
 
-        this.score = easy + 2*medium + 3*hard;
+        this.score = easy + medium + hard;
     }
 }
 

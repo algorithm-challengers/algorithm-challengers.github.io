@@ -5,6 +5,7 @@
 
 <main>
 	<h1>Algorithm Challengers</h1>
+	<hr />
 	<h3>entry</h3>
 	{#each users as user, i}
 		<h5>{i+1} : {user.name} ({user.contact})</h5>
@@ -18,8 +19,8 @@
 			<p>hard: {user.hard}</p>
 		{/if}
 		<p><b>total score: {user.score}</b></p>
-		<hr/>
 	{/each}
+	<hr />
 	<h3>problems</h3>
 	{#each problems as problem}
 		<h5>{problem.date}</h5>
