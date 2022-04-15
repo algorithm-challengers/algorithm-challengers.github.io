@@ -21,6 +21,7 @@
 		{/if}
 		<p><b>total score: {user.score}</b></p>
 		<details>
+			<summary>solved problems</summary>
 			<ol>
 			{#each solveds[user.name] as solved}
 					<li>{solved}</li>
