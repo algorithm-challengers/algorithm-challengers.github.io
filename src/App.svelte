@@ -1,6 +1,7 @@
 <script>
 	import { users } from './users';
 	import { problems } from './problems';
+	import { solveds } from './solved';
 </script>
 
 <main>
@@ -19,6 +20,13 @@
 			<p>hard: {user.hard}</p>
 		{/if}
 		<p><b>total score: {user.score}</b></p>
+		<details>
+			<ol>
+			{#each solveds[user.name] as solved}
+					<li>{solved}</li>
+			{/each}
+			</ol>
+		</details>
 	{/each}
 	<hr />
 	<h3>problems</h3>
