@@ -1,2 +1,1106 @@
-var app=function(){"use strict";function t(){}function e(t){return t()}function n(){return Object.create(null)}function o(t){t.forEach(e)}function r(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function s(t,e){t.appendChild(e)}function l(t,e,n){t.insertBefore(e,n||null)}function u(t){t.parentNode.removeChild(t)}function a(t,e){for(let n=0;n<t.length;n+=1)t[n]&&t[n].d(e)}function i(t){return document.createElement(t)}function m(t){return document.createTextNode(t)}function f(){return m(" ")}let d;function h(t){d=t}const p=[],g=[],y=[],$=[],b=Promise.resolve();let _=!1;function x(t){y.push(t)}const w=new Set;let k=0;function C(){const t=d;do{for(;k<p.length;){const t=p[k];k++,h(t),E(t.$$)}for(h(null),p.length=0,k=0;g.length;)g.pop()();for(let t=0;t<y.length;t+=1){const e=y[t];w.has(e)||(w.add(e),e())}y.length=0}while(p.length);for(;$.length;)$.pop()();_=!1,w.clear(),h(t)}function E(t){if(null!==t.fragment){t.update(),o(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(x)}}const v=new Set;function j(t,e){-1===t.$$.dirty[0]&&(p.push(t),_||(_=!0,b.then(C)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function N(c,s,l,a,i,m,f,p=[-1]){const g=d;h(c);const y=c.$$={fragment:null,ctx:null,props:m,update:t,not_equal:i,bound:n(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(s.context||(g?g.$$.context:[])),callbacks:n(),dirty:p,skip_bound:!1,root:s.target||g.$$.root};f&&f(y.root);let $=!1;if(y.ctx=l?l(c,s.props||{},((t,e,...n)=>{const o=n.length?n[0]:e;return y.ctx&&i(y.ctx[t],y.ctx[t]=o)&&(!y.skip_bound&&y.bound[t]&&y.bound[t](o),$&&j(c,t)),e})):[],y.update(),$=!0,o(y.before_update),y.fragment=!!a&&a(y.ctx),s.target){if(s.hydrate){const t=function(t){return Array.from(t.childNodes)}(s.target);y.fragment&&y.fragment.l(t),t.forEach(u)}else y.fragment&&y.fragment.c();s.intro&&((b=c.$$.fragment)&&b.i&&(v.delete(b),b.i(_))),function(t,n,c,s){const{fragment:l,on_mount:u,on_destroy:a,after_update:i}=t.$$;l&&l.m(n,c),s||x((()=>{const n=u.map(e).filter(r);a?a.push(...n):o(n),t.$$.on_mount=[]})),i.forEach(x)}(c,s.target,s.anchor,s.customElement),C()}var b,_;h(g)}const O={"냥냥이":["2020-04-13:easy","2022-04-14:easy","2022-04-15:easy"],snowmerak:["2020-04-13:easy","2022-04-14:easy","2022-04-15:easy"],"lemon-mint":["2022-04-15:easy"]};class A{constructor(t,e){this.name=t,this.contact=e,this.easy=0,this.medium=0,this.hard=0,this.score=0}}let S=[new A("냥냥이","냥냥이@삐약삐약.com"),new A("snowmerak","@snowmerak"),new A("lemon-mint","@lemon-mint")];S.sort(((t,e)=>e.score-t.score));for(let t=0;t<S.length;t++){let e=S[t],n=O[e.name];if(n){for(let t=0;t<n.length;t++){let[o,r]=n[t].split(":");"easy"===r?e.easy++:"medium"===r?e.medium++:"hard"===r&&e.hard++}e.score=e.easy+e.medium+e.hard}}class q{constructor(t,e,n,o){this.date=t,this.easy=e,this.medium=n,this.hard=o}}const B=[new q("2020-04-13","https://programmers.co.kr/learn/courses/30/lessons/77884","",""),new q("2022-04-14","https://programmers.co.kr/learn/courses/30/lessons/42840","",""),new q("2022-04-15","https://programmers.co.kr/learn/courses/30/lessons/42748","","")];function M(t,e,n){const o=t.slice();return o[0]=e[n],o}function P(t,e,n){const o=t.slice();return o[3]=e[n],o[5]=n,o}function T(t,e,n){const o=t.slice();return o[6]=e[n],o}function z(e){let n,o,r=e[6]+"";return{c(){n=i("li"),o=m(r)},m(t,e){l(t,n,e),s(n,o)},p:t,d(t){t&&u(n)}}}function D(e){let n,o,r,c,d,h,p,g,y,$,b,_,x,w,k,C,E,v,j=e[5]+1+"",N=e[3].name+"",A=e[3].contact+"",S=e[3].score+"",q=e[3].easy>0&&function(e){let n,o,r,c=e[3].easy+"";return{c(){n=i("p"),o=m("easy: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e),B=e[3].medium&&function(e){let n,o,r,c=e[3].medium+"";return{c(){n=i("p"),o=m("medium: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e),M=e[3].hard>0&&function(e){let n,o,r,c=e[3].hard+"";return{c(){n=i("p"),o=m("hard: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e),P=O[e[3].name],D=[];for(let t=0;t<P.length;t+=1)D[t]=z(T(e,P,t));return{c(){n=i("h5"),o=m(j),r=m(" : "),c=m(N),d=m(" ("),h=m(A),p=m(")"),g=f(),q&&q.c(),y=f(),B&&B.c(),$=f(),M&&M.c(),b=f(),_=i("p"),x=i("b"),w=m("total score: "),k=m(S),C=f(),E=i("details"),v=i("ol");for(let t=0;t<D.length;t+=1)D[t].c()},m(t,e){l(t,n,e),s(n,o),s(n,r),s(n,c),s(n,d),s(n,h),s(n,p),l(t,g,e),q&&q.m(t,e),l(t,y,e),B&&B.m(t,e),l(t,$,e),M&&M.m(t,e),l(t,b,e),l(t,_,e),s(_,x),s(x,w),s(x,k),l(t,C,e),l(t,E,e),s(E,v);for(let t=0;t<D.length;t+=1)D[t].m(v,null)},p(t,e){if(t[3].easy>0&&q.p(t,e),t[3].medium&&B.p(t,e),t[3].hard>0&&M.p(t,e),0&e){let n;for(P=O[t[3].name],n=0;n<P.length;n+=1){const o=T(t,P,n);D[n]?D[n].p(o,e):(D[n]=z(o),D[n].c(),D[n].m(v,null))}for(;n<D.length;n+=1)D[n].d(1);D.length=P.length}},d(t){t&&u(n),t&&u(g),q&&q.d(t),t&&u(y),B&&B.d(t),t&&u($),M&&M.d(t),t&&u(b),t&&u(_),t&&u(C),t&&u(E),a(D,t)}}}function F(e){let n,o,r,c,a,d,h=e[0].date+"",p=""!=e[0].easy&&function(e){let n,o,r,c=e[0].easy+"";return{c(){n=i("p"),o=m("easy: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e),g=""!=e[0].medium&&function(e){let n,o,r,c=e[0].medium+"";return{c(){n=i("p"),o=m("medium: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e),y=""!=e[0].hard&&function(e){let n,o,r,c=e[0].hard+"";return{c(){n=i("p"),o=m("hard: "),r=m(c)},m(t,e){l(t,n,e),s(n,o),s(n,r)},p:t,d(t){t&&u(n)}}}(e);return{c(){n=i("h5"),o=m(h),r=f(),p&&p.c(),c=f(),g&&g.c(),a=f(),y&&y.c(),d=m("")},m(t,e){l(t,n,e),s(n,o),l(t,r,e),p&&p.m(t,e),l(t,c,e),g&&g.m(t,e),l(t,a,e),y&&y.m(t,e),l(t,d,e)},p(t,e){""!=t[0].easy&&p.p(t,e),""!=t[0].medium&&g.p(t,e),""!=t[0].hard&&y.p(t,e)},d(t){t&&u(n),t&&u(r),p&&p.d(t),t&&u(c),g&&g.d(t),t&&u(a),y&&y.d(t),t&&u(d)}}}function G(e){let n,o,r,c,m,d,h,p,g,y,$,b,_=S,x=[];for(let t=0;t<_.length;t+=1)x[t]=D(P(e,_,t));let w=B,k=[];for(let t=0;t<w.length;t+=1)k[t]=F(M(e,w,t));return{c(){n=i("main"),o=i("h1"),o.textContent="Algorithm Challengers",r=f(),c=i("hr"),m=f(),d=i("h3"),d.textContent="entry",h=f();for(let t=0;t<x.length;t+=1)x[t].c();p=f(),g=i("hr"),y=f(),$=i("h3"),$.textContent="problems",b=f();for(let t=0;t<k.length;t+=1)k[t].c()},m(t,e){l(t,n,e),s(n,o),s(n,r),s(n,c),s(n,m),s(n,d),s(n,h);for(let t=0;t<x.length;t+=1)x[t].m(n,null);s(n,p),s(n,g),s(n,y),s(n,$),s(n,b);for(let t=0;t<k.length;t+=1)k[t].m(n,null)},p(t,[e]){if(0&e){let o;for(_=S,o=0;o<_.length;o+=1){const r=P(t,_,o);x[o]?x[o].p(r,e):(x[o]=D(r),x[o].c(),x[o].m(n,p))}for(;o<x.length;o+=1)x[o].d(1);x.length=_.length}if(0&e){let o;for(w=B,o=0;o<w.length;o+=1){const r=M(t,w,o);k[o]?k[o].p(r,e):(k[o]=F(r),k[o].c(),k[o].m(n,null))}for(;o<k.length;o+=1)k[o].d(1);k.length=w.length}},i:t,o:t,d(t){t&&u(n),a(x,t),a(k,t)}}}return new class extends class{$destroy(){!function(t,e){const n=t.$$;null!==n.fragment&&(o(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(t){var e;this.$$set&&(e=t,0!==Object.keys(e).length)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}{constructor(t){super(),N(this,t,null,G,c,{})}}({target:document.body,props:{name:"world"}})}();
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function custom_event(type, detail, bubbles = false) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                const component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.47.0' }, detail), true));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function validate_each_argument(arg) {
+        if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
+            let msg = '{#each} only iterates over array-like objects.';
+            if (typeof Symbol === 'function' && arg && Symbol.iterator in arg) {
+                msg += ' You can use a spread to convert this iterable into an array.';
+            }
+            throw new Error(msg);
+        }
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    const solveds = {
+        '냥냥이':
+            [
+                '2020-04-13:easy',
+                '2022-04-14:easy',
+                '2022-04-15:easy',
+            ],
+        'snowmerak':
+            [
+                '2020-04-13:easy',
+                '2022-04-14:easy',
+                '2022-04-15:easy',
+            ],
+        'lemon-mint':
+            [
+                '2022-04-15:easy',
+            ],
+    };
+
+    class User {
+        constructor(name, contact) {
+            this.name = name;
+            this.contact = contact;
+            this.easy = 0;
+            this.medium = 0;
+            this.hard = 0;
+            this.score = 0;
+        }
+    }
+
+    let users = [
+        new User('냥냥이', '@arc-jung'),
+        new User('snowmerak', '@snowmerak'),
+        new User('lemon-mint', '@lemon-mint'),
+    ];
+
+    users.sort((a, b) => b.score - a.score);
+
+    for (let i = 0; i < users.length; i++) {
+        let user = users[i];
+        let solved = solveds[user.name];
+        if (solved) {
+            for (let j = 0; j < solved.length; j++) {
+                let [date, level] = solved[j].split(':');
+                if (level === 'easy') {
+                    user.easy++;
+                } else if (level === 'medium') {
+                    user.medium++;
+                } else if (level === 'hard') {
+                    user.hard++;
+                }
+            }
+            user.score = user.easy + user.medium + user.hard;
+        }
+    }
+
+    class Problem {
+        constructor(date, easy, medium, hard) {
+            this.date = date;
+            this.easy = easy;
+            this.medium = medium;
+            this.hard = hard;
+        }
+    }
+
+    const problems = [
+        new Problem('2020-04-13', 'https://programmers.co.kr/learn/courses/30/lessons/77884', '', ''),
+        new Problem('2022-04-14', 'https://programmers.co.kr/learn/courses/30/lessons/42840', '', ''),
+        new Problem('2022-04-15', 'https://programmers.co.kr/learn/courses/30/lessons/42748', '', ''),
+    ];
+
+    /* src/App.svelte generated by Svelte v3.47.0 */
+    const file = "src/App.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[0] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[3] = list[i];
+    	child_ctx[5] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[6] = list[i];
+    	return child_ctx;
+    }
+
+    // (15:3) {#if user.easy > 0}
+    function create_if_block_5(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*user*/ ctx[3].easy + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("easy: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 15, 4, 362);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_5.name,
+    		type: "if",
+    		source: "(15:3) {#if user.easy > 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (18:3) {#if user.medium}
+    function create_if_block_4(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*user*/ ctx[3].medium + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("medium: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 18, 4, 421);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_4.name,
+    		type: "if",
+    		source: "(18:3) {#if user.medium}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (21:3) {#if user.hard > 0}
+    function create_if_block_3(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*user*/ ctx[3].hard + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("hard: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 21, 4, 486);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_3.name,
+    		type: "if",
+    		source: "(21:3) {#if user.hard > 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:3) {#each solveds[user.name] as solved}
+    function create_each_block_2(ctx) {
+    	let li;
+    	let t_value = /*solved*/ ctx[6] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			t = text(t_value);
+    			add_location(li, file, 28, 5, 636);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, t);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2.name,
+    		type: "each",
+    		source: "(28:3) {#each solveds[user.name] as solved}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (11:1) {#each users as user, i}
+    function create_each_block_1(ctx) {
+    	let h3;
+    	let t0_value = /*i*/ ctx[5] + 1 + "";
+    	let t0;
+    	let t1;
+    	let t2_value = /*user*/ ctx[3].name + "";
+    	let t2;
+    	let t3;
+    	let t4_value = /*user*/ ctx[3].contact + "";
+    	let t4;
+    	let t5;
+    	let t6;
+    	let details0;
+    	let summary0;
+    	let b;
+    	let t7;
+    	let t8_value = /*user*/ ctx[3].score + "";
+    	let t8;
+    	let t9;
+    	let t10;
+    	let t11;
+    	let t12;
+    	let details1;
+    	let summary1;
+    	let t14;
+    	let ol;
+    	let if_block0 = /*user*/ ctx[3].easy > 0 && create_if_block_5(ctx);
+    	let if_block1 = /*user*/ ctx[3].medium && create_if_block_4(ctx);
+    	let if_block2 = /*user*/ ctx[3].hard > 0 && create_if_block_3(ctx);
+    	let each_value_2 = solveds[/*user*/ ctx[3].name];
+    	validate_each_argument(each_value_2);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = text(" : ");
+    			t2 = text(t2_value);
+    			t3 = text(" (");
+    			t4 = text(t4_value);
+    			t5 = text(")");
+    			t6 = space();
+    			details0 = element("details");
+    			summary0 = element("summary");
+    			b = element("b");
+    			t7 = text("total score: ");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			if (if_block0) if_block0.c();
+    			t10 = space();
+    			if (if_block1) if_block1.c();
+    			t11 = space();
+    			if (if_block2) if_block2.c();
+    			t12 = space();
+    			details1 = element("details");
+    			summary1 = element("summary");
+    			summary1.textContent = "solved problems";
+    			t14 = space();
+    			ol = element("ol");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(h3, file, 11, 2, 222);
+    			add_location(b, file, 13, 12, 292);
+    			add_location(summary0, file, 13, 3, 283);
+    			add_location(details0, file, 12, 2, 270);
+    			add_location(summary1, file, 25, 3, 548);
+    			add_location(ol, file, 26, 3, 586);
+    			add_location(details1, file, 24, 2, 535);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t0);
+    			append_dev(h3, t1);
+    			append_dev(h3, t2);
+    			append_dev(h3, t3);
+    			append_dev(h3, t4);
+    			append_dev(h3, t5);
+    			insert_dev(target, t6, anchor);
+    			insert_dev(target, details0, anchor);
+    			append_dev(details0, summary0);
+    			append_dev(summary0, b);
+    			append_dev(b, t7);
+    			append_dev(b, t8);
+    			append_dev(details0, t9);
+    			if (if_block0) if_block0.m(details0, null);
+    			append_dev(details0, t10);
+    			if (if_block1) if_block1.m(details0, null);
+    			append_dev(details0, t11);
+    			if (if_block2) if_block2.m(details0, null);
+    			insert_dev(target, t12, anchor);
+    			insert_dev(target, details1, anchor);
+    			append_dev(details1, summary1);
+    			append_dev(details1, t14);
+    			append_dev(details1, ol);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ol, null);
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*user*/ ctx[3].easy > 0) if_block0.p(ctx, dirty);
+    			if (/*user*/ ctx[3].medium) if_block1.p(ctx, dirty);
+    			if (/*user*/ ctx[3].hard > 0) if_block2.p(ctx, dirty);
+
+    			if (dirty & /*solveds, users*/ 0) {
+    				each_value_2 = solveds[/*user*/ ctx[3].name];
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ol, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_2.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(details0);
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    			if (if_block2) if_block2.d();
+    			if (detaching) detach_dev(t12);
+    			if (detaching) detach_dev(details1);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(11:1) {#each users as user, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (40:3) {#if problem.easy != ''}
+    function create_if_block_2(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*problem*/ ctx[0].easy + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("easy: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 40, 3, 848);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(40:3) {#if problem.easy != ''}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (43:3) {#if problem.medium != ''}
+    function create_if_block_1(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*problem*/ ctx[0].medium + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("medium: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 43, 4, 919);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(43:3) {#if problem.medium != ''}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (46:3) {#if problem.hard != ''}
+    function create_if_block(ctx) {
+    	let p;
+    	let t0;
+    	let t1_value = /*problem*/ ctx[0].hard + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			t0 = text("hard: ");
+    			t1 = text(t1_value);
+    			add_location(p, file, 46, 4, 992);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    			append_dev(p, t0);
+    			append_dev(p, t1);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(46:3) {#if problem.hard != ''}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (36:1) {#each problems as problem}
+    function create_each_block(ctx) {
+    	let h3;
+    	let t0_value = /*problem*/ ctx[0].date + "";
+    	let t0;
+    	let t1;
+    	let details;
+    	let summary;
+    	let t3;
+    	let t4;
+    	let t5;
+    	let t6;
+    	let if_block0 = /*problem*/ ctx[0].easy != '' && create_if_block_2(ctx);
+    	let if_block1 = /*problem*/ ctx[0].medium != '' && create_if_block_1(ctx);
+    	let if_block2 = /*problem*/ ctx[0].hard != '' && create_if_block(ctx);
+
+    	const block = {
+    		c: function create() {
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			details = element("details");
+    			summary = element("summary");
+    			summary.textContent = "list";
+    			t3 = space();
+    			if (if_block0) if_block0.c();
+    			t4 = space();
+    			if (if_block1) if_block1.c();
+    			t5 = space();
+    			if (if_block2) if_block2.c();
+    			t6 = space();
+    			add_location(h3, file, 36, 2, 754);
+    			add_location(summary, file, 38, 3, 793);
+    			add_location(details, file, 37, 2, 780);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h3, anchor);
+    			append_dev(h3, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, details, anchor);
+    			append_dev(details, summary);
+    			append_dev(details, t3);
+    			if (if_block0) if_block0.m(details, null);
+    			append_dev(details, t4);
+    			if (if_block1) if_block1.m(details, null);
+    			append_dev(details, t5);
+    			if (if_block2) if_block2.m(details, null);
+    			append_dev(details, t6);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*problem*/ ctx[0].easy != '') if_block0.p(ctx, dirty);
+    			if (/*problem*/ ctx[0].medium != '') if_block1.p(ctx, dirty);
+    			if (/*problem*/ ctx[0].hard != '') if_block2.p(ctx, dirty);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(details);
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    			if (if_block2) if_block2.d();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(36:1) {#each problems as problem}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let main;
+    	let h1;
+    	let t1;
+    	let hr0;
+    	let t2;
+    	let h20;
+    	let t4;
+    	let t5;
+    	let hr1;
+    	let t6;
+    	let h21;
+    	let t8;
+    	let each_value_1 = users;
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = problems;
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			main = element("main");
+    			h1 = element("h1");
+    			h1.textContent = "Algorithm Challengers";
+    			t1 = space();
+    			hr0 = element("hr");
+    			t2 = space();
+    			h20 = element("h2");
+    			h20.textContent = "entry";
+    			t4 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t5 = space();
+    			hr1 = element("hr");
+    			t6 = space();
+    			h21 = element("h2");
+    			h21.textContent = "problems";
+    			t8 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			add_location(h1, file, 7, 1, 139);
+    			add_location(hr0, file, 8, 1, 171);
+    			add_location(h20, file, 9, 1, 179);
+    			add_location(hr1, file, 33, 1, 697);
+    			add_location(h21, file, 34, 1, 705);
+    			add_location(main, file, 6, 0, 131);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, main, anchor);
+    			append_dev(main, h1);
+    			append_dev(main, t1);
+    			append_dev(main, hr0);
+    			append_dev(main, t2);
+    			append_dev(main, h20);
+    			append_dev(main, t4);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(main, null);
+    			}
+
+    			append_dev(main, t5);
+    			append_dev(main, hr1);
+    			append_dev(main, t6);
+    			append_dev(main, h21);
+    			append_dev(main, t8);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(main, null);
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*solveds, users*/ 0) {
+    				each_value_1 = users;
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(main, t5);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*problems*/ 0) {
+    				each_value = problems;
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(main, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(main);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('App', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ users, problems, solveds });
+    	return [];
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "App",
+    			options,
+    			id: create_fragment.name
+    		});
+    	}
+    }
+
+    const app = new App({
+    	target: document.body,
+    	props: {
+    		name: 'world'
+    	}
+    });
+
+    return app;
+
+})();
 //# sourceMappingURL=bundle.js.map
