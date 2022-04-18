@@ -9,6 +9,7 @@ export const solveds = {
         [
             '2022-04-14:easy',
             '2022-04-15:easy',
+            '2022-04-18:easy',
         ],
     '날코':
         [
@@ -26,5 +27,6 @@ export const solveds = {
             '2022-04-13:easy',
             '2022-04-14:easy',
             '2022-04-15:easy',
+            '2022-04-18:easy',
         ],
 }
