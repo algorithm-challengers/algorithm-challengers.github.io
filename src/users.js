@@ -15,7 +15,7 @@ export let users = [
     new User('냥냥이', '@arc-jung'),
     new User('snowmerak', '@snowmerak'),
     new User('lemon-mint', '@lemon-mint'),
-    new User('날코', ''),
+    new User('날코', '@narcotis'),
     new User('축산협회', ''),
 ]
 
