@@ -1,6 +1,6 @@
 # 코딩테스트 성실 냥이 선발 대회!
 
-![HitCount](http://hits.dwyl.com/algorithm-challengers/algorithm-challengers.github.io.svg)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falgorithm-challengers%2Falgorithm-challengers.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 ## 코딩테스트 성실 냥이 점수 및 문제 리스트
 https://algorithm-challengers.pages.dev/
