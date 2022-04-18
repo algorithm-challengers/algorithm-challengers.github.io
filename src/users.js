@@ -17,6 +17,7 @@ export let users = [
     new User('lemon-mint', '@lemon-mint'),
     new User('날코', '@narcotis'),
     new User('축산협회', ''),
+    new User('연유라떼', '@mistrie'),
 ]
 
 for (let i = 0; i < users.length; i++) {
