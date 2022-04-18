@@ -7,7 +7,7 @@
 <main>
 	<h1>Algorithm Challengers</h1>
 	<hr />
-	<h2>entry</h2>
+	<h2>똑냥이</h2>
 	{#each users as user, i}
 		<h3>{i+1} : {user.name} ({user.contact})</h3>
 		<details>
