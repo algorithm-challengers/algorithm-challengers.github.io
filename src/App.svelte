@@ -14,13 +14,12 @@
 
 <main>
 	<h1>Algorithm Challengers</h1>
-	<button on:click={setTap(0)}>랭킹</button>
-	<button on:click={setTap(1)}>문제</button>
-	<button on:click={setTap(2)}>냥방</button>
+	<button type="button" on:click={setTap(0)}>똑냥이 랭킹</button>
+	<button type="button" on:click={setTap(1)}>문제</button>
+	<button type="button" on:click={setTap(2)}>냥방</button>
 	<hr />
 
 	{#if tap == 0}
-		<h2>똑냥이</h2>
 		{#each users as user, i}
 			<h3>{i+1} : {user.name} ({user.contact})</h3>
 			<details>
@@ -47,7 +46,6 @@
 	{/if}
 
 	{#if tap == 1}
-		<h2>problems</h2>
 		{#each problems as problem}
 			<h3>{problem.date}</h3>
 			<details>
@@ -66,7 +64,6 @@
 	{/if}
 
 	{#if tap == 2}
-		<h2>냥방</h2>
 		<p>[대충 냥냥이가 쓸 소개말]</p>
 		<a href="https://open.kakao.com/o/gbCkR4zd">카카오톡 오픈톡 링크</a>
 	{/if}
