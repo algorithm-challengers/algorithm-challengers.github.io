@@ -1,7 +1,6 @@
 # 코딩테스트 성실 냥이 선발 대회!
 
-![HitCount](http://hits.dwyl.com/algorithm-challengers/algorithm-challengers.github.io
-.svg)
+![HitCount](http://hits.dwyl.com/algorithm-challengers/algorithm-challengers.github.io.svg)
 
 ## 코딩테스트 성실 냥이 점수 및 문제 리스트
 https://algorithm-challengers.pages.dev/
