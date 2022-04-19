@@ -37,4 +37,8 @@ export const solveds = {
         [
             '2022-04-18:easy',
         ],
+    'noname':
+        [
+            '2022-04-19:easy',
+        ],
 }
