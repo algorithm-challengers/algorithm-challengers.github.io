@@ -41,4 +41,5 @@ export const solveds = {
         [
             '2022-04-19:easy',
         ],
+     '피치': [ '2022-04-19:easy', ],
 }
