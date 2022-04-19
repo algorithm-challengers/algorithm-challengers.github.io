@@ -76,7 +76,7 @@
 	{/if}
 
 	{#if tap == 3}
-		<p>[대충 냥냥이가 쓸 소개말]</p>
+		<p>라룩냥이는 돼뚱냥이</p>
 		<a href="https://open.kakao.com/o/gbCkR4zd">카카오톡 오픈톡 링크</a>
 	{/if}
 </main>
