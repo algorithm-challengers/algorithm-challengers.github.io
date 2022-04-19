@@ -12,13 +12,13 @@ export class User {
 }
 
 export let users = [
-    new User('냥냥이', '@arc-jung'),
-    new User('snowmerak', '@snowmerak'),
-    new User('lemon-mint', '@lemon-mint'),
-    new User('날코', '@narcotis'),
-    new User('축산협회', ''),
-    new User('연유라떼', '@mistrie'),
-    new User('noname', '@noname0310'),
+    new User('냥냥이', 'arc-jung'),
+    new User('snowmerak', 'snowmerak'),
+    new User('lemon-mint', 'lemon-mint'),
+    new User('날코', 'narcotis'),
+    new User('축산협회', 'god'),
+    new User('연유라떼', 'mistrie'),
+    new User('noname', 'noname0310'),
 ]
 
 for (let i = 0; i < users.length; i++) {

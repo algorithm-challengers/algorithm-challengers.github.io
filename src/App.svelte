@@ -34,7 +34,7 @@
 
 	{#if tap == 1}
 		{#each users as user, i}
-			<h3>{i+1} : {user.name} ({user.contact})</h3>
+			<h3>{i+1} : {user.name} (<a href="https://github.com/{user.contact}">@{user.contact}</a>)</h3>
 			<details>
 				<summary><b>total score: {user.score}</b></summary>
 				{#if user.easy > 0}
