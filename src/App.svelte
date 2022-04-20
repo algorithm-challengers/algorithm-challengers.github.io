@@ -1,11 +1,24 @@
 <script>
-	import { users } from './users';
+	import './data/users_inject';
+	import { users } from './data/users_list';
 	import { problems } from './problems';
-	import { solveds } from './solved';
 
 	let tap = 0;
 
 	function setTap(t) {
+		switch (t) {
+			case 0:
+				break;
+			case 1:
+				users.sort((a, b) => b.score - a.score);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			default:
+				break;
+		}
 		return function () {
 			tap = t;
 		};
@@ -50,7 +63,7 @@
 			<details>
 				<summary>solved problems</summary>
 				<ol>
-				{#each solveds[user.name] as solved}
+				{#each user.solveds as solved}
 					<li>{solved}</li>
 				{/each}
 				</ol>
