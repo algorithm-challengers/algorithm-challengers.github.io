@@ -12,7 +12,7 @@ export class User {
 }
 
 export let users = [
-    new User('냥냥이', 'arc-jung'),
+    new User('냥냥이', 'Arc-Jung'),
     new User('snowmerak', 'snowmerak'),
     new User('lemon-mint(피치)', 'lemon-mint'),
     new User('날코', 'narcotis'),
