@@ -6,6 +6,7 @@ let user = new User('snowmerak', 'snowmerak', [
     '2022-04-15:easy',
     '2022-04-18:easy',
     '2022-04-19:easy',
+    '2022-04-20:easy',
 ]);
 
 users.push(user);
