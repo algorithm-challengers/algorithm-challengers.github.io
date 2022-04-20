@@ -64,13 +64,13 @@
 			<details>
 				<summary>list</summary>
 				{#if problem.easy != ''}
-				<p>easy: {problem.easy}</p>
+					<p>easy: <a href={problem.easy}>{problem.easy}</a></p>
 				{/if}
 				{#if problem.medium != ''}
-					<p>medium: {problem.medium}</p>
+					<p>medium: <a href={problem.medium}>{problem.medium}</a></p>
 				{/if}
 				{#if problem.hard != ''}
-					<p>hard: {problem.hard}</p>
+					<p>hard: <a href={problem.hard}>{problem.hard}</a></p>
 				{/if}
 			</details>
 		{/each}
