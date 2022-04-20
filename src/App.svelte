@@ -50,9 +50,9 @@
 			<details>
 				<summary>solved problems</summary>
 				<ol>
-				<!-- {#each solveds[user.name] as solved}
-					<li>{solved.problem}</li>
-				{/each} -->
+				{#each solveds[user.name] as solved}
+					<li>{solved}</li>
+				{/each}
 				</ol>
 			</details>
 		{/each}

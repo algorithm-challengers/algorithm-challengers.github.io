@@ -26,7 +26,7 @@ export const solveds = {
             '2022-04-15:easy',
             '2022-04-18:easy',
         ],
-    'lemon-mint':
+    'lemon-mint(피치)':
         [
             '2022-04-13:easy',
             '2022-04-14:easy',
