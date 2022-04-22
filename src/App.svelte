@@ -43,6 +43,7 @@
 		<p>6. 문제 목록은 이 사이트에서 확인 할 수 있는 거시야옹!</p>
 		<p>7. 각종 개선사항 및 문의는 눈냥이한테 물어봐달라냥</p>
         <p>8. 점수 갱신 및 수정 요청은 냥냥이 || 날코냥이 || 눈냥이 한테 문의하면 된다냥!</p>
+		<p>9. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWbriP5yBfhPHMNNg44hhWUxEq-vSLYTZBES_guPUx3l9K7A/viewform?usp=sf_link">이곳</a>으로 하면 매일 22시에 일괄처리 한다냥!</p>
 	{/if}
 
 	{#if tap == 1}
