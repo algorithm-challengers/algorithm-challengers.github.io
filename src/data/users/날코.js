@@ -8,6 +8,7 @@ let user = new User('날코', 'narcotis', [
     '2022-04-18:easy',
     '2022-04-19:easy',
     '2022-04-20:easy',
+    '2022-04-21:easy',
 ]);
 
 users.push(user);
