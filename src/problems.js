@@ -9,6 +9,7 @@ export class Problem {
 }
 
 export const problems = [
+    new Problem('2022-05-01', 'https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/', 'https://leetcode.com/problems/k-divisible-elements-subarrays/', ''),
     new Problem('2022-04-27', 'https://programmers.co.kr/learn/courses/30/lessons/42576', '', ''),
     new Problem('2022-04-26', 'https://programmers.co.kr/learn/courses/30/lessons/42862', '', ''),
     new Problem('2022-04-23', 'https://leetcode.com/problems/find-closest-number-to-zero/', '', ''),
