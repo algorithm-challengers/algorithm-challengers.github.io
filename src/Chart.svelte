@@ -5,6 +5,7 @@
     import { problems } from "./problems";
 
     let category = problems.map((problem) => problem.date).reverse();
+    console.log(category)
     let series = [];
 
     for (let user of users) {
