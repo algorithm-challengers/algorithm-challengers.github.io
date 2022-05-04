@@ -2,6 +2,7 @@
 	import './data/users_inject';
 	import { users } from './data/users_list';
 	import { problems } from './problems';
+	import Chart from './Chart.svelte';
 
 	let tap = 0;
 
@@ -46,6 +47,7 @@
 	{/if}
 
 	{#if tap == 1}
+		<Chart></Chart>
 		{#each users as user, i}
 			<h3>{i+1} : {user.name} (<a href="https://github.com/{user.contact}">@{user.contact}</a>)</h3>
 			<details>
