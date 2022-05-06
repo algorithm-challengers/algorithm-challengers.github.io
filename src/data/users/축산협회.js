@@ -7,7 +7,8 @@ let user = new User('축산협회', 'god', [
     '2022-04-18:easy',
     '2022-04-20:easy',
     '2022-04-21:easy',
-    '2022-05-01:easy',
+    '2022-05-01:medium',
+    '2022-05-06:medium',
 ]);
 
 users.push(user);
