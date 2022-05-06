@@ -9,6 +9,8 @@ export class Problem {
 }
 
 export const problems = [
+    new Problem('2022-05-06', 'https://leetcode.com/problems/create-target-array-in-the-given-order/', 'https://leetcode.com/problems/number-of-substrings-with-only-1s/', ''),
+    new Problem('2022-05-05', 'https://leetcode.com/problems/shift-2d-grid/', 'https://leetcode.com/problems/max-chunks-to-make-sorted/', ''),
     new Problem('2022-05-01', 'https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/', 'https://leetcode.com/problems/k-divisible-elements-subarrays/', ''),
     new Problem('2022-04-27', 'https://programmers.co.kr/learn/courses/30/lessons/42576', '', ''),
     new Problem('2022-04-26', 'https://programmers.co.kr/learn/courses/30/lessons/42862', '', ''),
