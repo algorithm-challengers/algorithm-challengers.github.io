@@ -42,14 +42,14 @@
 		<p>4. 몇일 지난 문제도 풀어도 점수가 인정되는 거시애옹</p>
 		<p>5. 문제 목록은 이 사이트에서 확인 할 수 있는 거시야옹!</p>
 		<p>6. 각종 개선사항 및 문의는 눈냥이한테 물어봐달라냥</p>
-        	<p>7. 요청은 냥냥이 || 날코냥이 || 눈냥이 한테 문의하면 된다냥!</p>
+        <p>7. 요청은 냥냥이 || 날코냥이 || 눈냥이 한테 문의하면 된다냥!</p>
 		<p>9. 점수 반영 요청은 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWbriP5yBfhPHMNNg44hhWUxEq-vSLYTZBES_guPUx3l9K7A/viewform?usp=sf_link">이 링크</a>륵 클릭하여 문제를 푼 스크린샷을 첨부하면 하면 냥냥이와 눈냥이가 일괄 처리 한다냥!</p>
 	{/if}
 
 	{#if tap == 1}
 		<Chart></Chart>
 		{#each users as user, i}
-			<h3>{i+1} : {user.name} (<a href="https://github.com/{user.contact}">@{user.contact}</a>)</h3>
+			<h3>{i+1} : {user.name} (<a target="_black" href="https://github.com/{user.contact}">@{user.contact}</a>)</h3>
 			<details>
 				<summary><b>total score: {user.score}</b></summary>
 				{#if user.easy > 0}
@@ -79,13 +79,13 @@
 			<details>
 				<summary>list</summary>
 				{#if problem.easy != ''}
-					<p>easy: <a href={problem.easy}>{problem.easy}</a></p>
+					<p>easy: <a target="_black" href={problem.easy}>{problem.easy}</a></p>
 				{/if}
 				{#if problem.medium != ''}
-					<p>medium: <a href={problem.medium}>{problem.medium}</a></p>
+					<p>medium: <a target="_black" href={problem.medium}>{problem.medium}</a></p>
 				{/if}
 				{#if problem.hard != ''}
-					<p>hard: <a href={problem.hard}>{problem.hard}</a></p>
+					<p>hard: <a target="_black" href={problem.hard}>{problem.hard}</a></p>
 				{/if}
 			</details>
 		{/each}
@@ -93,6 +93,6 @@
 
 	{#if tap == 3}
 		<p>라룩냥이는 돼뚱냥이</p>
-		<a href="https://open.kakao.com/o/gbCkR4zd">카카오톡 오픈톡 링크</a>
+		<a target="_black" href="https://open.kakao.com/o/gbCkR4zd">카카오톡 오픈톡 링크</a>
 	{/if}
 </main>
