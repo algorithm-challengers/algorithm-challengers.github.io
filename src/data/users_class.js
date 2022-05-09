@@ -18,6 +18,6 @@ export class User {
             }
         }
 
-        this.score = this.easy * 10 + this.medium * 20 + this.hard * 30;
+        this.score = this.easy * 10 + this.medium * 10 + this.hard * 10;
     }
 }
