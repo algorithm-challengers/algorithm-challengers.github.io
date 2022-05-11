@@ -43,7 +43,7 @@
 		<p>5. 문제 목록은 이 사이트의 문제탭에서 확인할 수 있습니다.</p>
 		<p>6. 각종 개선사항 및 문의는 프로젝트의 이슈에 남겨주시면 감사하겠습니다.</p>
         <p>7. 요청은 냥냥이 || 날코냥이 || 눈냥이 한테 문의하면 됩니다.</p>
-		<p>9. 점수 반영 요청은 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWbriP5yBfhPHMNNg44hhWUxEq-vSLYTZBES_guPUx3l9K7A/viewform?usp=sf_link">이 링크</a>륵 클릭하여 문제를 푼 스크린샷을 첨부하면 일정 기간 후 일괄적으로 처리하여 반영하게습니다.</p>
+		<p>9. 점수 반영 요청은 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWbriP5yBfhPHMNNg44hhWUxEq-vSLYTZBES_guPUx3l9K7A/viewform?usp=sf_link">이 링크</a>를 클릭하여 문제를 푼 스크린샷을 첨부하면 일정 기간 후 일괄적으로 처리하여 반영하게습니다.</p>
 	{/if}
 
 	{#if tap == 1}
