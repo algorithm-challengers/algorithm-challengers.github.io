@@ -29,9 +29,9 @@
 <main>
 	<h1>Algorithm Challengers</h1>
 	<button type="button" on:click={setTap(0)}>소개</button>
-	<button type="button" on:click={setTap(1)}>똑냥이 랭킹</button>
+	<button type="button" on:click={setTap(1)}>랭킹</button>
 	<button type="button" on:click={setTap(2)}>문제</button>
-	<button type="button" on:click={setTap(3)}>냥방</button>
+	<button type="button" on:click={setTap(3)}>카카오톡 오픈 채팅방</button>
 	<hr />
 
 	{#if tap == 0}
