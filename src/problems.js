@@ -9,6 +9,7 @@ export class Problem {
 }
 
 export const problems = [
+    new Problem('2022-05-12', 'https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/', 'https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/', 'https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/'),
     new Problem('2022-05-09', 'https://leetcode.com/problems/concatenation-of-array/', 'https://leetcode.com/problems/cyclically-rotating-a-grid/', 'https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and/'),
     new Problem('2022-05-07', 'https://programmers.co.kr/learn/courses/30/lessons/12924', 'https://leetcode.com/problems/sum-of-two-integers/', ''),
     new Problem('2022-05-06', 'https://leetcode.com/problems/create-target-array-in-the-given-order/', 'https://leetcode.com/problems/number-of-substrings-with-only-1s/', ''),
